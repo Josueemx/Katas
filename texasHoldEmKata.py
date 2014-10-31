@@ -1,4 +1,9 @@
 def GetRankedGame(hands):
+    """
+        Esta funcion recibe las manos y se encarga de determinar 
+        que juego tiene cada mano, darles puntajes y determinar cual gana
+        (regresa una cadena con el formato indicado) 
+    """
     handsarr = hands.split("\n")
     finishedstring = ''
     itcount = -1
@@ -124,6 +129,8 @@ def GetRankedGame(hands):
             finalstring += winstring[x].replace('*', ' (winner)\n')
         else:
             finalstring += winstring[x].replace('*', '\n')
+                
+
     return finalstring
     
 if __name__ == '__main__':

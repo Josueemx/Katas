@@ -73,11 +73,11 @@ class TestKatas(unittest.TestCase):
         self.u2Ofspring14 = ".........\n.........\n.........\n.........\n.........\n.........\n...*.....\n..**.....\n...**....\n"
         self.u2Ofspring15 = ".........\n.........\n.........\n.........\n.........\n.........\n..**.....\n..*......\n..***....\n"
         self.u2Ofspring16 = ".........\n.........\n.........\n.........\n.........\n.........\n..**.....\n.*..*....\n..**.....\n"
-        
+
         self.texas1 = "Kc 9s Ks Kd 9d 3c 6d\n9c Ah Ks Kd 9d 3c 6d\nAc Qc Ks Kd 9d 3c\n9h 5s\n4d 2d Ks Kd 9d 3c 6d\n7s Ts Ks Kd 9d"
-        self.texas1Result = "Kc 9s Ks Kd 9d 3c 6d Full House (winner)\n9c Ah Ks Kd 9d 3c 6d Two Pair\nAc Qc Ks Kd 9d 3c One Pair\n9h 5s\n4d 2d Ks Kd 9d 3c 6d Flush\n7s Ts Ks Kd 9d One Pair"
-        self.texas2 = "9h 5s\9c Ah 3c Kd 9d 3d 6d\Ac Qc Ks Kd 9d Ks\Kc 9s Ks Kd Kh 3c 6d\4d 2d Ks Kd 9d 3c 6d\7s Ts Ks Kd 9d"
-        self.texas2Result = "9h 5s\n9c Ah 3c Kd 9d 3d 6d Two Pair\nAc Qc Ks Kd 9d Ks Three of a kind\nKc 9s Ks Kd Kh 3c 6d Poker (winner)\n4d 2d Ks Kd 9d 3c 6d Flush\n7s Ts Ks Kd 9d One Pair"
+        self.texas1Result = "Kc 9s Ks Kd 9d 3c 6d Full House (winner)\n9c Ah Ks Kd 9d 3c 6d Two Pair\nAc Qc Ks Kd 9d 3c\n9h 5s\n4d 2d Ks Kd 9d 3c 6d Flush\n7s Ts Ks Kd 9d\n"
+        self.texas2 = "9h 5s\n9c Ah 3c Kd 9d 3d 6d\nAc Qc Ks Kd 9d Ks\nKc 9s Ks Kd Kh 3c 6d\n4d 2d Ks Kd 9d 3c 6d\n7s Ts Ks Kd 9d"
+        self.texas2Result = "9h 5s\n9c Ah 3c Kd 9d 3d 6d Two Pair\nAc Qc Ks Kd 9d Ks\nKc 9s Ks Kd Kh 3c 6d Poker (winner)\n4d 2d Ks Kd 9d 3c 6d Flush\n7s Ts Ks Kd 9d\n"
         
     def test_fizzbuzz(self):
         for x in self.fizzBuzzSeq.items():
@@ -194,6 +194,6 @@ class TestKatas(unittest.TestCase):
     def test_texasHoldEmKata(self):
         self.assertEqual(GetRankedGame(self.texas1), self.texas1Result)
         self.assertEqual(GetRankedGame(self.texas2), self.texas2Result)
-
+        
 if __name__ == '__main__':
     unittest.main()
